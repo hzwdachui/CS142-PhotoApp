@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<body>
+	<div>
+		
+		<button ng-click="deleteUser()" ng-if="main.curUser._id == main.login_user._id">Delete Account</button>
+		<div>
+			<md-card layout="column" layout-align="space-between center">
+				<div>user id: {{main.curUser._id}}</div>
+				<div>first name: {{main.curUser.first_name}}</div>
+				<div>last name: {{main.curUser.last_name}}</div>
+				<div>location: {{main.curUser.location}}</div>
+				<div>description: {{main.curUser.description}}</div>
+				<div>occupation: {{main.curUser.occupation}}</div>
+				<div><a href="#!photos/{{main.curUser._id}}">Photos</a></div>
+			</md-card>
+			<md-card layout="column" layout-align="space-between center">
+				<md-card-content>
+
+					<div>Lastest photo (Post at:{{main.recentPhotoDate}})<br>
+						<span ng-if="main.recentPhoto !== null"><a href="#!photos/{{main.curUser._id}}">
+								<image class="image" ng-src={{main.recentPhoto}}></image>
+							</a>
+						</span>
+					</div>
+				</md-card-content>
+				<md-card-content>
+					<div>Popular photo (Times:{{main.comment_count}})<br>
+						<span ng-if="main.mostCommentPhoto !== null">
+							<a href="#!photos/{{main.curUser._id}}">
+								<image class="image" ng-src={{main.mostCommentPhoto}}></image>
+							</a>
+						</span>
+					</div>
+
+				</md-card-content>
+			</md-card>
+
+		</div>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<body>
+	<div ng-repeat="photo in main.photolist">
+		<md-content layout="column">
+			<md-card>
+				<md-card-title layout="column" layout-align="start start">
+					<img ng-src="images/{{photo.file_name}}" /><br>
+					<span>Created:{{photo.date_time}}</span>
+					<p ng-if="hasliked(photo)">You have already liked this photo!</p>
+					<button ng-if="main.curUser._id == main.login_user._id"
+						ng-click="deletePhoto(photo)"> Delete Photo</button>
+					<button ng-show="!liked(photo)" ng-click="likePhoto(photo)"> Like </button>
+					<button ng-show="liked(photo)" ng-click="likePhoto(photo)"> Cancel </button>
+					<span>Liked:{{photo.like_count}}</span>
+				</md-card-title>
+				<md-content layout-align="start start">
+					<div ng-repeat="comment in photo.comments">
+						<md-card>
+							<p> Time: {{comment.date_time}} </p>
+							<a ng-href="#!/users/{{comment.user._id}}">
+								User: {{comment.user.first_name}}&nbsp;{{comment.user.last_name}}</a>
+							<p> {{comment.comment}} </p>
+							<div>
+								<md-button ng-if="comment.user._id == main.login_user._id"
+									ng-click="deleteComment(photo,comment)"> Delete Comment</md-button>
+							</div>
+						</md-card>
+					</div>
+				</md-content>
+				<md-card layout="column" layout-align="start start">
+					<md-input-container>
+					<input type="test" ng-model="main.newcomment" placeholder="say something..."
+						ng-minlength="1">
+					<md-button ng-click="addComment(photo)"> Add Comment</md-button>
+				</md-input-container>
+				</md-card>
+			</md-card>
+		</md-content>
+	</div>
+</body>
+
+</html>

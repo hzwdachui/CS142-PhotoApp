@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<md-content>
+		<md-subheader class="md-no-sticky">User List:</md-subheader>
+
+		<md-list>
+			<md-list-item >
+				<div layout = "column">
+				<a href="#!users/{{main.login_user._id}}">{{main.login_user.first_name}}
+					{{main.login_user.last_name}}</a>
+					
+					<span>{{main.login_user.activity}}</span>
+					<img class="photo" ng-if="main.login_user.activity =='added photo'" ng-src="images/{{main.login_user.recent_photo}}" />
+					<md-button class="md-fab" ng-if="main.login_user.activity =='commented'" ng-disabled="true" aria-label="Comment">
+						<img ng-src = "images/icons/com.png"></img>
+					</md-button>
+				</div>
+			</md-list-item>
+
+			<md-divider></md-divider>
+			<md-list-item ng-repeat="user in main.otherUserList">
+					<div layout = "column">
+				<a href="#!users/{{user._id}}">{{user.first_name}} {{user.last_name}}</a>
+				
+					<span> {{user.activity}} </span>
+					<img class="photo" ng-if="user.activity === 'added photo'" ng-src="images/{{user.recent_photo}}" />
+					<md-button class="md-fab" ng-if="user.activity =='commented'" ng-disabled="true" aria-label="Comment">
+							<img ng-src = "images/icons/com.png"></img>
+						</md-button>
+				</div>
+			</md-list-item>
+		</md-list>
+		</div>
+	</md-content>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+
+<body>
+	<div>
+		<md-card>
+			<md-card-content layout="column" layout-align="center center">
+				<div layout="column">
+					<span>Login in:</span>
+					<span>It's free and always will be</span>
+				</div>
+				<div layout="row">
+					<md-input-container><input type="text" id="log" ng-model="main.login_name" placeholder="Username"
+							ng-minlength="1" /></md-input-container>
+					<md-input-container><input type="password" id="pwd" ng-model="main.login_password" placeholder="Password"
+							ng-minlength="1" /></md-input-container>
+					<md-button class = "btn" ng-click="submitLogin()">Login</md-button>
+				</div>
+			</md-card-content>
+		</md-card>
+		<md-card>
+			<md-card-content layout="column" layout-align="center center">
+				<div>
+					Sign up as a new user:
+					<div id="required"> * Required </div>
+				</div>
+				<div layout="row">
+					<md-input-container> <input type="text" id="username" ng-model="register.newName" placeholder="Username"
+							ng-minlength="1" />*</md-input-container>
+					<md-input-container> <input type="password" id="password1" ng-model="register.password1" placeholder="Password"
+							ng-minlength="1" />*</md-input-container>
+				</div>
+				<div layout="row">
+					<md-input-container> <input type="password" id="password2" ng-model="register.password2"
+							placeholder="Password again" ng-minlength="1" />*</md-input-container>
+					<md-input-container> <input type="text" id="first_name" ng-model="register.first_name" placeholder="First Name"
+							ng-minlength="1" />*</md-input-container>
+				</div>
+				<div layout="row">
+					<md-input-container> <input type="text" id="last_name" ng-model="register.last_name" placeholder="Last Name"
+							ng-minlength="1" />*</md-input-container>
+					<md-input-container> <input type="text" ng-model="location" placeholder="Location" ng-minlength="1" /> </md-input-container>
+				</div>
+				<div layout="row">
+					<md-input-container> <input type="text" ng-model="register.description" placeholder="Description"
+							ng-minlength="1" /> </md-input-container>
+					<md-input-container> <input type="text" ng-model="register.occupation" placeholder="Occupation" ng-minlength="1" /></md-input-container>
+				</div>
+				<div>
+					<md-button class = "btn" ng-click="submitSignUp()">Sign Up</md-button>
+				</div>
+			</md-card-content>
+		</md-card>
+	</div>
+</body>
+
+</html>

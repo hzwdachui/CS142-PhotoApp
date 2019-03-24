@@ -1,0 +1,32 @@
+Project #8 - Submission form
+
+Story number and name: 1 - Extend user profile detail with usage
+Story points: 3
+Brief description to see the story in action:
+When see a user detail, the view will show two picture: one is the latest one, another is the photo with most comments.
+
+Story number and name: 5 - Deleting Comments, Photos, and Users
+Story points: 4
+Brief description to see the story in action:
+A user can delete his comments, his photos and his account when he is 
+logged in.(When deleting the account, all related photos and comments will also be deleted)
+
+Story number and name: 8 - Sidebar list marks users with new activity
+Story points: 3
+Brief description to see the story in action:
+The userlist can show the activitie of a user: adding photo, log in, log out, comment and register.
+
+Story number and name: 6 - Photo like votes
+Story points: 4
+Brief description to see the story in action:
+The user can like or cancel this like of a photo.
+
+Total Story Points: 14
+
+Marketing Video URL (ensure permissions are set to public viewing):https://youtu.be/sgPJYnNQc_c
+
+Is it OK with you if we post your Marketing Video URL on the class discussion forum? No
+
+Instructions for Grading (should be easy to run app from new machine): None
+
+
