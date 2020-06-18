@@ -10,7 +10,7 @@
   "author": "Mendel Rosenblum <mendel@cs.stanford.edu> (http://www.stanford.edu/~mendel)",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.4",
+    "angular": "^1.8.0",
     "angular-animate": "^1.4.9",
     "angular-aria": "^1.4.9",
     "angular-material": "^1.0.4",
