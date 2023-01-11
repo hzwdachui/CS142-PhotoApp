@@ -8,7 +8,7 @@
     "request": "^2.69.0"
   },
   "devDependencies": {
-    "mocha": "^2.3.4"
+    "mocha": "^10.2.0"
   },
   "scripts": {
     "test": "mocha serverApiTest.js sessionInputApiTest.js cs142passwordTest.js"
